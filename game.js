@@ -33,6 +33,11 @@ function handSelector(){
     if (playerOneChoice == `` || playerTwoChoice == ``){
         console.log(`We're missing an input. Let's try that again.`)
         playAgain();
+    };
+
+    if (!playerOneChoice == 'rock' || !playerOneChoice == 'paper' || !playerOneChoice == 'scissors' || !playerTwoChoice == 'rock' || !playerTwoChoice == 'paper' || !playerOneChoice == 'scissors'){
+        console.log(`Invalid input. Try again.`)
+        playAgain();
     }else if (playerOneChoice == playerTwoChoice){
         console.log(`TIE`)
         playAgain();
@@ -83,15 +88,3 @@ handSelector();
 
 
 
-
-// if (rock = rock) //tie
-// if (rock = paper) //paper
-// if (rock = scissors) //rock
-
-// if (paper = rock) //paper
-// if (paper = paper) //tie
-// if (paper = scissors) //scissors
-
-// if (scissors = rock) //rock
-// if (scissors = paper) //paper
-// if (scissors = scissors) //scissors
